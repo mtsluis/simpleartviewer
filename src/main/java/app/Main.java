@@ -3,6 +3,8 @@ package app;
 import artwork.Artwork;
 import com.google.gson.Gson;
 import handlers.APIHandler;
+import handlers.FileHandler;
+import handlers.ImageHandler;
 import handlers.SearchHandler;
 import terminalprint.TerminalPrint;
 
@@ -56,8 +58,11 @@ public class Main {
             userInput = scanner.nextLine();
             try {
                 SearchHandler searchHandler = gson.fromJson(apiHandler.searchRequest(userInput).body(), SearchHandler.class);
-                Artwork[] artworks = searchHandler.createArtList(apiHandler, 5);
+                Artwork[] artworks = searchHandler.createArtList(apiHandler, gson,5);
                 TerminalPrint.printArtTable(artworks);
+
+                FileHandler.saveImage(artworks[0]);
+                ImageHandler.showImage(artworks[0].getFilePath());
             } catch (URISyntaxException | IOException | InterruptedException e) {
                 throw new RuntimeException(e);
             }

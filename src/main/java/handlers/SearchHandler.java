@@ -24,8 +24,7 @@ public class SearchHandler {
         return artworksList;
     }
 
-    public Artwork[] createArtList(APIHandler apiHandler, int searchLimit) throws URISyntaxException, IOException, InterruptedException {
-        Gson gson = new Gson();
+    public Artwork[] createArtList(APIHandler apiHandler, Gson gson, int searchLimit) throws URISyntaxException, IOException, InterruptedException {
         artworksList = new Artwork[searchLimit];
         for (int i = 0; i < searchLimit; i++) {
             Artwork artwork = gson.fromJson(apiHandler.artworkRequest(String.valueOf(objectIDs[i])).body(), Artwork.class);
