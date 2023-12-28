@@ -4,6 +4,7 @@ import artwork.Artwork;
 import com.google.gson.Gson;
 import handlers.APIHandler;
 import handlers.SearchHandler;
+import terminalprint.TerminalPrint;
 
 import java.io.IOException;
 import java.net.URI;
@@ -56,7 +57,7 @@ public class Main {
             try {
                 SearchHandler searchHandler = gson.fromJson(apiHandler.searchRequest(userInput).body(), SearchHandler.class);
                 Artwork[] artworks = searchHandler.createArtList(apiHandler, 5);
-
+                TerminalPrint.printArtTable(artworks);
             } catch (URISyntaxException | IOException | InterruptedException e) {
                 throw new RuntimeException(e);
             }
