@@ -12,7 +12,8 @@ public class APIHandler {
     private final String MET_SEARCH_URL = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=";
     private final String MET_ARTWORKS_URL = "https://collectionapi.metmuseum.org/public/collection/v1/objects/";
 
-    public HttpResponse<String> searchRequest(String searchQuery) throws URISyntaxException, IOException, InterruptedException {
+    public HttpResponse<String> keywordSearchRequest(String searchQuery) throws URISyntaxException, IOException, InterruptedException {
+        searchQuery = searchQuery.replaceAll(" ", "+");
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(new URI(MET_SEARCH_URL + searchQuery))
                 .build();
@@ -22,7 +23,7 @@ public class APIHandler {
         return getResponse;
     }
 
-    public HttpResponse<String> artworkRequest(String artworkID) throws URISyntaxException, IOException, InterruptedException {
+    public HttpResponse<String> artworkSearchRequest(String artworkID) throws URISyntaxException, IOException, InterruptedException {
         HttpRequest httpRequest = HttpRequest.newBuilder()
                 .uri(new URI(MET_ARTWORKS_URL + artworkID))
                 .build();

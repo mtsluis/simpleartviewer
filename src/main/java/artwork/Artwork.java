@@ -9,6 +9,7 @@ public class Artwork {
     private String title;
     private String objectDate;
 
+    private String filePath;
 
     public int getObjectID() {
         return objectID;
@@ -32,5 +33,13 @@ public class Artwork {
 
     public String getObjectDate() {
         return objectDate;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
     }
 }

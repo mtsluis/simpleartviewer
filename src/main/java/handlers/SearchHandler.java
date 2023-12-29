@@ -24,12 +24,20 @@ public class SearchHandler {
         return artworksList;
     }
 
-    public Artwork[] createArtList(APIHandler apiHandler, int searchLimit) throws URISyntaxException, IOException, InterruptedException {
-        Gson gson = new Gson();
+    public Artwork[] createArtList(APIHandler apiHandler, Gson gson, int searchLimit) throws URISyntaxException, IOException, InterruptedException {
         artworksList = new Artwork[searchLimit];
+        int j = 0;
         for (int i = 0; i < searchLimit; i++) {
-            Artwork artwork = gson.fromJson(apiHandler.artworkRequest(String.valueOf(objectIDs[i])).body(), Artwork.class);
-            artworksList[i] = artwork;
+            if (i - 1 == objectIDs.length) {
+                break;
+            }
+            Artwork artwork = gson.fromJson(apiHandler.artworkSearchRequest(String.valueOf(objectIDs[i])).body(), Artwork.class);
+            if (artwork.isPublicDomain()) {
+                artworksList[j] = artwork;
+                j++;
+                continue;
+            }
+            searchLimit += 1;
         }
         return artworksList;
     }
