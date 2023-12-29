@@ -10,6 +10,7 @@ import terminalprint.TerminalPrint;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
