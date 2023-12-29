@@ -1,6 +1,9 @@
 
-![Logo](resources/logo.png)
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/logo_dark_theme.png">
+  <source media="(prefers-color-scheme: light)" srcset="resources/logo_light_theme.png">
+  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="resources/logo.png">
+</picture>
 
 # SimpleArtViewer
 
