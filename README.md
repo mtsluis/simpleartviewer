@@ -9,7 +9,7 @@
 
 SimpleArtViewer searches for public domain artworks in the Metropolitan Museum of Art Collection, using the museum's public API.
 
-This project is under development, as its purpose is mainly 
+This project is under development, as it was created mostly for personal learning purposes. However, I expect to polish it and to add more functionality, which I'll explain in more detail over the next section.
 
 ## Development
 The project still lacks a lot of planned functions (I guess we could say it's still very <i><b>simple</b></i>), but it's a work in progress.
