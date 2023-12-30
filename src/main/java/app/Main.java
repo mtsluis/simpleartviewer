@@ -15,8 +15,8 @@ import java.util.Scanner;
 
 //TODO implementar runnable para o input do user e passar tudo a comandos em vez de uma linha lógica no main
 //TODO criar um directório para armazenar informação do user se ele quiser criar um profile (criar classe Profile)
-//TODO início pode ser 1-login, 2-create profile 3-use without profile(you may create one later)
-//TODO
+//TODO início pode ser 1-enter with existing profile, 2-create profile 3-use without profile(you may create one later)
+
 public class Main {
     public static void main(String[] args) {
 

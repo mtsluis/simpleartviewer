@@ -10,7 +10,6 @@ import java.net.URL;
 
 public class FileHandler {
 
-
     public static void createTempDirectory() throws IOException {
         File directory = new File("temp");
         directory.mkdirs();
