@@ -10,8 +10,12 @@ Further development could add the following:
 * Free terminal interaction, replacing the current search/view artwork cycle
 * Possibility to choose the search type (e.g., by artist, artwork title, artwork type), and eventually combine those.
 
+## What it does
+Quite simply, it searches de database for a given keyword, and after selecting an artwork it will open the image file so that you can fully enjoy it. Looking at paintings is nice.
+
 ## Screenshot
 Search result table example:
+
 ![App Screenshot](resources/screenshot.png)
 
 ## Usage
