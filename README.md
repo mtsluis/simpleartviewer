@@ -1,20 +1,10 @@
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="resources/logo_dark_theme.png">
-  <source media="(prefers-color-scheme: light)" srcset="resources/logo_light_theme.png">
-  <img alt="Shows the logo of SimpleArtViewer" src="resources/logo.png">
-</picture>
-
 # SimpleArtViewer
 
 SimpleArtViewer searches for public domain artworks in the Metropolitan Museum of Art Collection, using the museum's public API.
 
-This project is under development, as it was created mostly for personal learning purposes. However, I expect to polish it and to add more functionality, which I'll explain in more detail over the next section.
+This project was developed only as a way to get familiar with Java, so it was mostly a learning experiecence. I'll leave it open, since it was quite fun and simple to do and it might help a lost soul that eventually reaches here.
 
-## Development
-The project still lacks a lot of planned functions (I guess we could say it's still very <i><b>simple</b></i>), but it's a work in progress.
-
-Further development should add the following:
+Further development could add the following:
 
 * Local user profiles, which allows the user to create an artwork library
 * Free terminal interaction, replacing the current search/view artwork cycle
@@ -27,8 +17,4 @@ Search result table example:
 ## Usage
 * Download/clone the repository
 * Compile
-* Run
-
-## Feedback
-
-If you have any feedback, please don't hesitate to reach out.
+* Ru
