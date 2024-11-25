@@ -2,8 +2,7 @@
 
 SimpleArtViewer searches for public domain artworks in the Metropolitan Museum of Art Collection, using the museum's public API.
 
-**This project was developed only as a way to get familiar with Java**, so it was mostly a learning experience. I'll leave it open, since it was quite fun and simple to do, and it might help in any way a lost soul that eventually finds their way here.
-
+**This project was developed only as a way to get familiar with Java**, so it was mostly a learning experience.
 Some further development could add the following:
 
 * Local user profiles, which allows the user to create an artwork library
